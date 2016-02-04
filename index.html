@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>SWFObject dynamic and static embed sampe</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript">
+      // swfobject.embedSWF("swf9_02.swf", "myFlashContent", "690", "430", "20.0");
+    </script>
+    <link rel="stylesheet" type="text/css" href="index.css"></link>
+  </head>
+  <body>
+    <div class="inst" tabindex="0"> 
+      Name can only contain letters.     
+    </div> 
+
+    <div id="test" class="text"> 
+      <label for="name">Name </label> 
+      <input type="text" size="30" name="name" id="name" /> 
+    </div> 
+
+    <div class="inst" tabindex="0"> 
+      E-mail will only be used to send you copy of your commment and allow us send you a response.   
+    </div> 
+
+    <div class="text"> 
+      <label for="email">E-mail </label> 
+      <input type="text" size="25" name="email" id="email" /> 
+    </div> 
+
+    <div class="inst" tabindex="0"> 
+      Please comment on the services and resources you found on this web site. 
+    </div> 
+
+    <div id="appContainer" class="inst" tabindex="0"> 
+      <embed id="app" name="app" tabindex="4" role="main" src="swf9_02.swf" wmode="window"
+             quality="high" pluginspage="http://www.macromedia.com/go/getfashplayer"
+             type="application/x-shockwave-flash" width="690" height="430">
+      </embed>
+    </div> 
+
+    <div class="text"> 
+      <label for="comment">Comment </label> 
+      <textarea id="comment" rows="5" cols="50" name="commnet" id="comment" ></textarea> 
+    </div>
+    <script type="text/javascript">
+
+      var container = document.getElementById('appContainer');
+
+      container.addEventListener('focus', function(evt){
+
+        var app = document.getElementById('app');
+
+        app.tabIndex = 0;
+        app.focus();
+
+      });
+
+      function goAhead() {
+
+        var comment = document.getElementById('comment');
+
+        if (document.activeElement != document.body) {
+          document.activeElement.blur();
+        }
+
+        comment.tabIndex = 0;
+        comment.focus();
+
+      }
+    </script>
+  </body>
+</html>

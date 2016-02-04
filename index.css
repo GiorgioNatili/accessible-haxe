@@ -1,0 +1,44 @@
+div.inst { 
+  margin: 0; 
+  padding: 0; 
+  margin-left: 20px; 
+  margin-top: .75em; 
+  margin-bottom: .25em; 
+  font-size: 80%; 
+  font-style: italic; 
+} 
+
+
+div.text label { 
+  margin: 0; 
+  padding: 0; 
+  margin-left: 20px; 
+  display: block; 
+  font-size: 100%; 
+  font-weight: bold; 
+} 
+
+div.text input, 
+div.text textarea { 
+  margin: 0; 
+  padding: 0; 
+  margin-left: 20px; 
+  margin-bottom: .5em; 
+  font-size: 100%; 
+} 
+
+div.text img { 
+  margin: 0; 
+  padding: 0; 
+  padding-left: .25em; 
+} 
+
+input:active, 
+input:focus, 
+input:hover, 
+textarea:active, 
+textarea:focus, 
+textarea:hover { 
+  background-color: lightyellow; 
+  border-color: yellow; 
+} 
