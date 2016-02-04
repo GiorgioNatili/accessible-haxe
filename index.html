@@ -33,10 +33,33 @@
     </div> 
 
     <div id="appContainer" class="inst" tabindex="0"> 
-      <embed id="app" name="app" tabindex="4" role="main" src="swf9_02.swf" wmode="window"
-             quality="high" pluginspage="http://www.macromedia.com/go/getfashplayer"
-             type="application/x-shockwave-flash" width="690" height="430">
-      </embed>
+
+      <object id="app" type="application/x-shockwave-flash" 
+        data="swf9_04.swf" width="400" height="326">
+        <param name="movie" value="swf9_04.swf" />
+        <param name="allowScriptAcess" value="sameDomain" />
+        <param name="quality" value="best" />
+        <param name="bgcolor" value="#FF00ff" />
+        <param name="scale" value="noScale" />
+        <param name="salign" value="TL" />
+        <param name="wmode" value="window" />
+      </object>
+      <object type="application/x-shockwave-flash" data="test_accessibility.swf" width="550" height="400" id="test_accessibility" style="float: none; vertical-align:middle">
+        <param name="movie" value="test_accessibility.swf" />
+        <param name="quality" value="high" />
+        <param name="bgcolor" value="#ffffff" />
+        <param name="play" value="true" />
+        <param name="loop" value="true" />
+        <param name="wmode" value="window" />
+        <param name="scale" value="showall" />
+        <param name="menu" value="true" />
+        <param name="devicefont" value="false" />
+        <param name="salign" value="" />
+        <param name="allowScriptAccess" value="sameDomain" />
+        <a href="http://www.adobe.com/go/getflash">
+          <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+        </a>
+      </object>
     </div> 
 
     <div class="text"> 
@@ -49,7 +72,7 @@
 
       container.addEventListener('focus', function(evt){
 
-        var app = document.getElementById('app');
+        var app = document.getElementById('test_accessibility');
 
         app.tabIndex = 0;
         app.focus();
